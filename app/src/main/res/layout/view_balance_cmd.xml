@@ -24,6 +24,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
 
-    <!-- Add other UI elements as needed -->
 
 </RelativeLayout>
