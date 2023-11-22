@@ -78,23 +78,31 @@ class MainActivity : AppCompatActivity() {
     //testing
     private fun handleIntent(intent: Intent?) {
 
+        // Reference to the TextViews
+        lateinit var textViewTitle: TextView
+        lateinit var textViewAccountBalance: TextView
+
 
         // Create an instance of FakeBackendImpl
         val fakeBackendImpl = FakeBackendImpl()
+
         if (intent?.action == Intent.ACTION_VIEW) {
             val accountName : String? = intent.getStringExtra("name")
             //val accountName = thingName
             val accountBalance = accountName?.let { fakeBackendImpl.getAccountBalanceByName(it) }
 
-
-
+            setContentView(R.layout.view_balance_cmd)
+            // Initialize the TextView references
+            textViewTitle = findViewById(R.id.textViewTitle)
+            textViewAccountBalance = findViewById(R.id.textViewAccountBalance)
 
             if (accountBalance != null) {
                 // Display the account balance
-                showToast("Account Balance for $accountName: $accountBalance")
-
+                //showToast("Account Balance for $accountName: $accountBalance")
+                textViewTitle.text = "Account Balance for $accountName: $accountBalance"
             } else {
-                showToast("No account found with the name: $accountName")
+                //showToast("No account found with the name: $accountName")
+                textViewTitle.text = "No account found with the name: $accountName"
             }
         } else {
             showDefaultView()
