@@ -14,6 +14,8 @@ import android.widget.Toast
 import com.github.mrmitew.bankapp.features.accounts.dto.AccountDTO
 import com.github.mrmitew.bankapp.features.backend.internal.FakeBackendImpl
 import android.widget.TextView
+import com.github.mrmitew.bankapp.features.accounts.repository.internal.RemoteAccountsRepositoryImpl
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +48,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Handle the incoming intent
-        handleIntent(intent)
+        //handleIntent(intent)
+        onNewIntent(intent)
+
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -73,18 +77,49 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 
+//    private fun handleIntent(intent: Intent?) {
+//        if (intent?.action == Intent.ACTION_VIEW) {
+//            //val actionName : String? = intent.getStringExtra("capability_name")
+//            val transferMode: String? = intent.getStringExtra("@type")
+//            val action = intent.getStringExtra("capability_name")
+//            showToast("$transferMode")
+//            when (action) {
+//                "actions.intent.GET_THING" -> handleGetThingIntent(intent)
+//                "actions.intent.CREATE_MONEY_TRANSFER" -> handleCreateMoneyTransferIntent(intent)
+//                else -> showDefaultView()
+//            }
+//        } else {
+//            showDefaultView()
+//        }
+//    }
+
+
+    private fun handleIntent(intent: Intent?) {
+        if (intent?.action == Intent.ACTION_VIEW) {
+
+            //val thingName: String? = intent.getStringExtra("moneyTransferOrigin.provider")
+            val transferMode: String? = intent.getStringExtra("transferMode")
+            if (transferMode == "http://schema.googleapis.com/ReceiveMoney") {
+                 handleCreateMoneyTransferIntent(intent)
+            } else {
+                handleGetThingIntent(intent)
+            }
+        } else {
+            showDefaultView()
+        }
+    }
 
 
     //testing
-    private fun handleIntent(intent: Intent?) {
+    private fun handleGetThingIntent(intent: Intent?) {
 
         // Reference to the TextViews
         lateinit var textViewTitle: TextView
-        lateinit var textViewAccountBalance: TextView
-
+        //lateinit var textViewAccountBalance: TextView
 
         // Create an instance of FakeBackendImpl
         val fakeBackendImpl = FakeBackendImpl()
+
 
         if (intent?.action == Intent.ACTION_VIEW) {
             val accountName : String? = intent.getStringExtra("name")
@@ -94,7 +129,7 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.view_balance_cmd)
             // Initialize the TextView references
             textViewTitle = findViewById(R.id.textViewTitle)
-            textViewAccountBalance = findViewById(R.id.textViewAccountBalance)
+            //textViewAccountBalance = findViewById(R.id.textViewAccountBalance)
 
             if (accountBalance != null) {
                 // Display the account balance
@@ -109,8 +144,37 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun handleCreateMoneyTransferIntent(intent: Intent) {
+        //val transferMode: String? = intent.getStringExtra("transferMode")
+        lateinit var transferTextView: TextView
+        setContentView(R.layout.activity_transfer_result)
+        transferTextView = findViewById(R.id.transferResultTextView)
+        val amountValue: String? = intent.getStringExtra("value")
+        val amountCurrency: String? = intent.getStringExtra("currency")
+        val originName: String? = intent.getStringExtra("moneyTransferOriginName")
+
+        val destinationName: String? =
+            intent.getStringExtra("moneyTransferDestinationName")
+
+        val originProviderName: String? =
+            intent.getStringExtra("moneyTransferOriginProvidername")
+
+        val destinationProviderName: String? =
+            intent.getStringExtra("moneyTransferDestinationProvidername")
+
+
+        // Create an instance of FakeBackendImpl
+        val fakeBackendImpl = FakeBackendImpl()
+
+        val transferResultMessage = "The amount of $amountValue has been successfully transferred from $originName to $destinationName"
+
+        // Set the text in the TextView
+        transferTextView.text = transferResultMessage
+    }
+
     private fun showDefaultView() {
         // default view
+        showToast("Inside Default View")
     }
 
     //show toast for checking

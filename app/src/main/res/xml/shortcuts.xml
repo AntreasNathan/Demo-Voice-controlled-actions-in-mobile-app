@@ -35,6 +35,42 @@
         </intent>
     </capability>
 
+
+    <capability android:name="actions.intent.CREATE_MONEY_TRANSFER">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.github.mrmitew.bankapp"
+            android:targetClass="com.github.mrmitew.bankapp.features.main.ui.MainActivity">
+            <!-- Eg. transferMode = "http://schema.googleapis.com/ReceiveMoney" -->
+            <parameter
+                android:name="moneyTransfer.transferMode"
+                android:key="transferMode"/>
+            <!-- Eg. value = "100" -->
+            <parameter
+                android:name="moneyTransfer.amount.value"
+                android:key="value"/>
+            <!-- Eg. currency = "USD" -->
+            <parameter
+                android:name="moneyTransfer.amount.currency"
+                android:key="currency"/>
+            <!-- Eg. moneyTransferOriginName = "Credit card" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferOrigin.name"
+                android:key="moneyTransferOriginName"/>
+            <!-- Eg. moneyTransferDestinationName = "Savings account" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferDestination.name"
+                android:key="moneyTransferDestinationName"/>
+            <!-- Eg. moneyTransferOriginProvidername = "Example Provider" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferOrigin.provider.name"
+                android:key="moneyTransferOriginProvidername"/>
+            <!-- Eg. moneyTransferDestinationProvidername = "Example Provider" -->
+            <parameter
+                android:name="moneyTransfer.moneyTransferDestination.provider.name"
+                android:key="moneyTransferDestinationProvidername"/>
+        </intent>
+    </capability>
     <!--    OPEN APP FEATURE with inline inventory
         https://developers.google.com/assistant/app/reference/built-in-intents/common/open-app-feature
 

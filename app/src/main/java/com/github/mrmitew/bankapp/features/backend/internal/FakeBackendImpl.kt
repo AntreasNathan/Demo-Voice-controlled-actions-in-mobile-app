@@ -225,7 +225,7 @@ class FakeBackendImpl : BackendApi {
         }
     }
 
-    //chat fuction
+
     // New function to get account balance by name
     fun getAccountBalanceByName(name: String): BigDecimal? {
         val account = findAccountByName(name)
