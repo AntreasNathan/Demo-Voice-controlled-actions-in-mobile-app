@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -37,4 +38,71 @@
         android:layout_marginTop="16dp"
         android:text="Welcome!"
         android:textSize="48sp" />
+</FrameLayout>-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Existing content from the first file -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".features.login.ui.LoginFragment">
+
+        <EditText
+            android:id="@+id/et_pincode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="128dp"
+            android:hint="#######"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:text="      "
+            android:textSize="20sp" />
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/butterScotch"
+            android:width="350dp"
+            android:text="Login"/>
+
+    </LinearLayout>
+
+
+    <!-- Integrated content from the second file -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <!-- Copy and paste relevant views and constraints from the second file -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_logo"
+            android:layout_width="448dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/img_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:textAlignment="center"
+            tools:text="Good Morning!"
+            tools:textColor="@color/petrol"
+            tools:textSize="27dp"
+            app:layout_constraintTop_toBottomOf="@id/img_logo"/>
+
+
+
 </FrameLayout>

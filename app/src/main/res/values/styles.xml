@@ -8,4 +8,50 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-</resources>
+        <!-- Text appearance for the welcome label -->
+        <style name="Tit" parent="TextAppearance.AppCompat.Display1">
+            <item name="android:textSize">48sp</item>
+            <!-- Add more styling attributes as needed -->
+        </style>
+
+        <!-- Text appearance for input labels in PasscodesInputLayout -->
+        <style name="InputLabelBig" parent="TextAppearance.MaterialComponents.Caption">
+            <item name="android:textSize">16sp</item>
+            <!-- Add more styling attributes as needed -->
+        </style>
+
+        <!-- Text appearance for PasscodesInputLayout validation hint -->
+        <style name="TextAppearence.App.PasscodesInputLayout" parent="TextAppearance.MaterialComponents.Caption">
+            <item name="android:textSize">12sp</item>
+            <!-- Add more styling attributes as needed -->
+        </style>
+
+        <!-- Style for Material Button Theme -->
+        <style name="MaterialComponentsButtonTheme" parent="Widget.MaterialComponents.Button">
+            <item name="android:textColor">@color/white_two</item>
+            <item name="android:textSize">16sp</item>
+            <!-- Add more styling attributes as needed -->
+        </style>
+
+    <style name="boxOutline">
+        <item name="android:width">20sp</item>
+        <item name="android:height">5sp</item>
+        <item name="android:textColor">@color/petrol</item>
+<!--        <item name="android:textSize">500dp</item>-->
+<!--        <item name="android:textSize">500sp</item>-->
+    </style>
+
+    <style name="MyToolbarTitleTextAppearance" parent="@style/boxOutline">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Adjust the text size as needed -->
+    </style>
+
+
+
+<!--    <style name="MyToolbarTitleTextAppearance" parent="@style/boxOutline">-->
+<!--        <item name="android:textSize">500dp</item> &lt;!&ndash; Adjust the text size as needed &ndash;&gt;-->
+<!--    </style>-->
+
+    </resources>
+
