@@ -11,9 +11,7 @@
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        android:background="@color/white_two">
-
+        android:animateLayoutChanges="true">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -41,12 +39,38 @@
         <TextView
             android:id="@+id/smallText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200px"
+            android:height="180dp"
             android:gravity="center"
             android:text="Available"
             android:textColor="@color/pine_green"
             android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="870px"
+            android:layout_height="100px"
             android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:textColor="@color/pine_green"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewAccountBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/pine_green"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@id/textViewTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -61,26 +85,7 @@
     <!--        app:navigationIcon="@drawable/ic_baseline_menu_24"-->
 
 
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="120dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/textViewAccountBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_below="@id/textViewTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
 
 
 

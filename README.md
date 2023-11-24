@@ -1,4 +1,5 @@
-.This is an app we found online from https://github.com/mrmitew/bankapp. We use it as a demo banking app to make it possible to execute functions using voice commands for easier usage by users and to facilitate individuals who may face difficulties using the app.
+
+This is an app we found online from https://github.com/mrmitew/bankapp. We use it as a demo banking app to make it possible to execute functions using voice commands for easier usage by users and to facilitate individuals who may face difficulties using the app.
 Bellow follows the original ReadMe.md from mrmitew.
 
 
