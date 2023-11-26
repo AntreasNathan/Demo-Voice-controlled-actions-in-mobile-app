@@ -19,4 +19,5 @@
     <string name="wrong_password">Wrong password</string>
     <string name="unknown_error">An error occurred</string>
     <string name="shortcut_short_label">short_label</string>
+    <string name="shortcut_long_label">short_label</string>
 </resources>

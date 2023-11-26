@@ -104,8 +104,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 handleGetThingIntent(intent)
             }
-        } else {
-            showDefaultView()
         }
     }
 
