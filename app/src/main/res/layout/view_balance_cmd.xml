@@ -34,9 +34,8 @@
         android:layout_height="wrap_content"
         android:width="90dp"
         android:backgroundTint="@color/pine_green"
-        android:onClick="addOne"
         android:text="Back" />
-
+        <!--android:onClick="addOne"-->
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
