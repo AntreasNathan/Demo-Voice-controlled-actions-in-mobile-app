@@ -26,6 +26,7 @@
 <!--        android:background="@color/butterScotch"-->
 <!--        android:width="350dp"-->
 <!--        android:text="Login"/>-->
+    <!-- Back Button -->
     <Button
         android:textAllCaps="false"
         android:id="@+id/btn_back"
