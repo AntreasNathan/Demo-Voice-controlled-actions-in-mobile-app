@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This file contains the words to be recognized by google assistant through voice
+-->
+<resources>
+    <array name="check_balance_synonyms">
+        <item>Inquire balance</item>
+        <item>Retrieve balance</item>
+        <item>Get account balance</item>
+        <item>View balance</item>
+        <item>Check account balance</item>
+        <item>Balance inquiry</item>
+        <item>Balance check</item>
+        <item>Account balance check</item>
+        <item>Balance status</item>
+        <item>Account overview</item>
+    </array>
+
+    <array name="make_transfer_synonyms">
+        <item>Transfer funds</item>
+        <item>Send money</item>
+        <item>Initiate transfer</item>
+        <item>Make a payment</item>
+        <item>Transfer money</item>
+        <item>Send funds</item>
+        <item>Initiate funds transfer</item>
+        <item>Make a transaction</item>
+        <item>Send payment</item>
+        <item>Money transfer</item>
+    </array>
+</resources>

@@ -27,6 +27,10 @@
                 <action android:name="android.intent.action.VIEW" />
 
             </intent-filter>
+            <intent-filter>
+                <action android:name="actions.intent.OPEN_APP_FEATURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
 
             <meta-data
                 android:name="android.app.shortcuts"
