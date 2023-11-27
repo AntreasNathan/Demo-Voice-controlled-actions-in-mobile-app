@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="90dp"
+        android:backgroundTint="@color/pine_green"
+        android:text="Back" />
+
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
@@ -22,6 +32,41 @@
             app:contentInsetStartWithNavigation="0dp"
             app:titleTextAppearance="@style/MyToolbarTitleTextAppearance"
             tools:title="Home" />
+
+        <!-- android:id="@+id/btnNavigateToAnotherActivity" -->
+        <!-- <Button
+            android:id="@+id/BackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back" /> -->
+
+        <!-- <Button
+            android:textAllCaps="false"
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/pine_green"
+            android:width="90dp"
+            android:text="Back"/> -->
+
+        <!-- android:layout_marginButton="355dp" -->
+        <TextView
+            android:id="@+id/Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="172dp"
+            android:layout_marginTop="357dp"
+            android:layout_marginEnd="180dp"
+
+            android:text="1"
+            android:textColor="#000"
+            android:textSize="100sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,6 +81,7 @@
         android:layout_centerHorizontal="true"
         android:elevation="30dp">
 
+
         <TextView
             android:id="@+id/smallText"
             android:layout_width="match_parent"
@@ -44,14 +90,15 @@
             android:gravity="center"
             android:text="Available"
             android:textColor="@color/pine_green"
-            android:textSize="12sp"
+            android:textSize="17sp"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            android:layout_marginTop="-30dp"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="870px"
-            android:layout_height="100px"
+            android:layout_height="200px"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
             android:textColor="@color/pine_green"
@@ -83,10 +130,5 @@
 
     <!--        app:menu="@menu/dashboard_menu"-->
     <!--        app:navigationIcon="@drawable/ic_baseline_menu_24"-->
-
-
-
-
-
 
 </RelativeLayout>
