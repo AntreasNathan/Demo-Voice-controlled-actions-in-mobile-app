@@ -82,25 +82,43 @@
 
     <!-- Add Open App Feature BII capability   -->
     <!-- This is a sample shortcuts.xml -->
-    <capability android:name="actions.intent.OPEN_APP_FEATURE">
-        <intent
-            android:targetPackage="com.github.mrmitew.bankapp"
-            android:targetClass="com.github.mrmitew.bankapp.features.main.ui.MainActivity">
-            <parameter
-                android:name="feature"
-                android:key="featureParam"/>
-        </intent>
-    </capability>
-    <!-- Short and long labels must be @string resource. -->
+<!--    <capability android:name="actions.intent.OPEN_APP_FEATURE">-->
+<!--        <intent-->
+<!--            android:targetPackage="com.github.mrmitew.bankapp"-->
+<!--            android:targetClass="com.github.mrmitew.bankapp.features.main.ui.MainActivity">-->
+<!--            <parameter-->
+<!--                android:name="feature"-->
+<!--                android:key="featureParam"/>-->
+<!--        </intent>-->
+<!--    </capability>-->
+
+
+
+<!--    &lt;!&ndash; Short and long labels must be @string resource. &ndash;&gt;&ndash;&gt;-->
+    <!--    <shortcut-->
+    <!--        android:shortcutId="ID_ONE"-->
+    <!--        android:shortcutShortLabel="@string/shortcut_short_label"-->
+    <!--        android:shortcutLongLabel="@string/shortcut_long_label"-->
+    <!--        android:enabled="false">-->
+    <!--        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">-->
+    <!--            <parameter-binding-->
+    <!--                android:value="@array/check_balance_synonyms"-->
+    <!--                android:key="feature"/>-->
+    <!--        </capability-binding>-->
+    <!--    </shortcut>-->
+
+
+
     <shortcut
-        android:shortcutId="ID_ONE"
-        android:shortcutShortLabel="@string/shortcut_short_label"
-        android:shortcutLongLabel="@string/shortcut_long_label">
-    <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
-        <parameter-binding
-            android:value="featureParam"
-            android:key="feature"/>
-    </capability-binding>
+        android:shortcutId="CHECK_BALANCE"
+        android:shortcutShortLabel="@string/check_balance_short_label"
+        android:shortcutLongLabel="@string/check_balance_long_label">
+        <capability-binding android:key="actions.intent.GET_THING">
+            <parameter-binding
+                android:value="@array/check_balance_synonyms"
+                android:key="name"
+                android:name="thing.name"/>
+        </capability-binding>
     </shortcut>
 
 </shortcuts>
