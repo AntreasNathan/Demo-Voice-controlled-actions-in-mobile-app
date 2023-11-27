@@ -2,6 +2,7 @@ package com.github.mrmitew.bankapp.features.main.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -14,11 +15,14 @@ import android.widget.Toast
 import com.github.mrmitew.bankapp.features.accounts.dto.AccountDTO
 import com.github.mrmitew.bankapp.features.backend.internal.FakeBackendImpl
 import android.widget.TextView
+import androidx.navigation.NavController
 import com.github.mrmitew.bankapp.features.accounts.repository.internal.RemoteAccountsRepositoryImpl
-
+import java.math.BigDecimal
 
 
 class MainActivity : AppCompatActivity() {
+    // Create an instance of FakeBackendImpl
+    private val fakeBackendImpl = FakeBackendImpl()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -51,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         //handleIntent(intent)
         onNewIntent(intent)
 
+
+
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -58,40 +64,6 @@ class MainActivity : AppCompatActivity() {
         // Handle new incoming intents, if any
         handleIntent(intent)
     }
-
-
-//Working sample
-//    private fun handleIntent(intent: Intent?) {
-//        if (intent?.action == Intent.ACTION_VIEW) {
-//            val thingName : String? = intent.getStringExtra("thing.name")
-//
-//            if (thingName != null) {
-//
-//                showToast("AccName: $thingName")
-//            } else {
-//
-//                showToast("Thing name is null")
-//            }
-//        } else {
-//            showDefaultView()
-//        }
-//    }
-
-//    private fun handleIntent(intent: Intent?) {
-//        if (intent?.action == Intent.ACTION_VIEW) {
-//            //val actionName : String? = intent.getStringExtra("capability_name")
-//            val transferMode: String? = intent.getStringExtra("@type")
-//            val action = intent.getStringExtra("capability_name")
-//            showToast("$transferMode")
-//            when (action) {
-//                "actions.intent.GET_THING" -> handleGetThingIntent(intent)
-//                "actions.intent.CREATE_MONEY_TRANSFER" -> handleCreateMoneyTransferIntent(intent)
-//                else -> showDefaultView()
-//            }
-//        } else {
-//            showDefaultView()
-//        }
-//    }
 
 
     private fun handleIntent(intent: Intent?) {
@@ -115,13 +87,8 @@ class MainActivity : AppCompatActivity() {
         lateinit var textViewTitle: TextView
         //lateinit var textViewAccountBalance: TextView
 
-        // Create an instance of FakeBackendImpl
-        val fakeBackendImpl = FakeBackendImpl()
-
-
         if (intent?.action == Intent.ACTION_VIEW) {
             val accountName : String? = intent.getStringExtra("name")
-            //val accountName = thingName
             val accountBalance = accountName?.let { fakeBackendImpl.getAccountBalanceByName(it) }
 
             setContentView(R.layout.view_balance_cmd)
@@ -137,6 +104,7 @@ class MainActivity : AppCompatActivity() {
                 //showToast("No account found with the name: $accountName")
                 textViewTitle.text = "No account found with the name: $accountName"
             }
+
         } else {
             showDefaultView()
         }
@@ -154,17 +122,31 @@ class MainActivity : AppCompatActivity() {
         val destinationName: String? =
             intent.getStringExtra("moneyTransferDestinationName")
 
-        val originProviderName: String? =
-            intent.getStringExtra("moneyTransferOriginProvidername")
+//        val originProviderName: String? =
+//            intent.getStringExtra("moneyTransferOriginProvidername")
+//
+//        val destinationProviderName: String? =
+//            intent.getStringExtra("moneyTransferDestinationProvidername")
 
-        val destinationProviderName: String? =
-            intent.getStringExtra("moneyTransferDestinationProvidername")
+        val accountBalanceOrigin = originName?.let { fakeBackendImpl.getAccountBalanceByName(it) }
+        val accountBalanceDestination = destinationName?.let { fakeBackendImpl.getAccountBalanceByName(it) }
+        var transferResultMessage = ""
+
+        if (accountBalanceOrigin != null) {
+            if(accountBalanceOrigin < BigDecimal(amountValue)){
+                transferResultMessage = "Not enough balance in $originName account"
+            }
+            else{
+                transferResultMessage = "The amount of $amountValue has been successfully transferred from $originName to $destinationName"
+            }
+        }
+        else {
+            transferResultMessage = "Account not found with the name: $originName"
+        }
 
 
-        // Create an instance of FakeBackendImpl
-        val fakeBackendImpl = FakeBackendImpl()
 
-        val transferResultMessage = "The amount of $amountValue has been successfully transferred from $originName to $destinationName"
+
 
         // Set the text in the TextView
         transferTextView.text = transferResultMessage

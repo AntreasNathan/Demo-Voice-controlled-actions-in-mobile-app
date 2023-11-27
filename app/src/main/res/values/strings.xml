@@ -20,4 +20,6 @@
     <string name="unknown_error">An error occurred</string>
     <string name="shortcut_short_label">short_label</string>
     <string name="shortcut_long_label">short_label</string>
+    <string name="check_balance_short_label">Check Balance</string>
+    <string name="check_balance_long_label">Check your account balance</string>
 </resources>
