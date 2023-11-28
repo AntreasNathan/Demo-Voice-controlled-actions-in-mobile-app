@@ -46,7 +46,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/pine_green"
-            android:width="90dp"
             android:text="Back"/> -->
 
         <!-- android:layout_marginButton="355dp" -->
