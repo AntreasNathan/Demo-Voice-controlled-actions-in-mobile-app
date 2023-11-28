@@ -7,26 +7,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-<!--    <EditText-->
-<!--        android:id="@+id/et_pincode"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginRight="128dp"-->
-<!--        android:hint="    "-->
-<!--        android:inputType="numberPassword"-->
-<!--        android:maxLength="4"-->
-<!--        android:text="0000"-->
-<!--        android:textSize="20sp" />-->
-
-<!--    <Button-->
-<!--        android:textAllCaps="false"-->
-<!--        android:id="@+id/btn_login"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/butterScotch"-->
-<!--        android:width="350dp"-->
-<!--        android:text="Login"/>-->
-    <!-- Back Button -->
     <Button
         android:textAllCaps="false"
         android:id="@+id/btn_back"
@@ -35,14 +15,13 @@
         android:width="90dp"
         android:backgroundTint="@color/pine_green"
         android:text="Back" />
-        <!--android:onClick="addOne"-->
+
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        tools:context=".features.login.ui.ViewBalanceFragment">
+        android:animateLayoutChanges="true">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -71,23 +50,6 @@
             android:text="Back"/> -->
 
         <!-- android:layout_marginButton="355dp" -->
-        <!-- <TextView
-            android:id="@+id/Back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="172dp"
-            android:layout_marginTop="357dp"
-            android:layout_marginEnd="180dp"
-
-            android:text="1"
-            android:textColor="#000"
-            android:textSize="100sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" /> -->
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
