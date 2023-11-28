@@ -15,13 +15,6 @@
         android:text="Verification"
         android:textColor="@color/petrol"
         android:textSize="27sp"/>
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_logo"
-        android:layout_width="300dp"
-        android:layout_height="58dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="40dp"
-        app:srcCompat="@drawable/tick" />
 
     <TextView
         android:id="@+id/textViewTitle2"
