@@ -100,6 +100,7 @@ class MainActivity : AppCompatActivity() {
                 // Display the account balance
                 //showToast("Account Balance for $accountName: $accountBalance")
                 textViewTitle.text = "$accountName\n$accountBalance"
+
             } else {
                 //showToast("No account found with the name: $accountName")
                 textViewTitle.text = "No account found with the name: $accountName"

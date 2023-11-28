@@ -107,18 +107,4 @@
     <!--        </capability-binding>-->
     <!--    </shortcut>-->
 
-
-
-    <shortcut
-        android:shortcutId="CHECK_BALANCE"
-        android:shortcutShortLabel="@string/check_balance_short_label"
-        android:shortcutLongLabel="@string/check_balance_long_label">
-        <capability-binding android:key="actions.intent.GET_THING">
-            <parameter-binding
-                android:value="@array/check_balance_synonyms"
-                android:key="name"
-                android:name="thing.name"/>
-        </capability-binding>
-    </shortcut>
-
 </shortcuts>
