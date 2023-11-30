@@ -19,7 +19,7 @@ class FakeBackendImpl : BackendApi {
 
     // FIXME: Account balance doesn't really match the transactions.. let's say we don't keep old transactions :)
     val accounts = mutableListOf(
-        AccountDTO(1, "Stefan Mitev", "NLXXGIMB123IBAN", Account.TYPE_PAYMENT, "EUR", BigDecimal(1_992)),
+        AccountDTO(1, "Bill Gates", "NLXXGIMB123IBAN", Account.TYPE_PAYMENT, "EUR", BigDecimal(1_992)),
         AccountDTO(2, "Tim Cook", "NLXXJFAKE123IBAN", Account.TYPE_PAYMENT, "EUR", BigDecimal(6000)),
         AccountDTO(3, "Elon Musk", "NLXXAMS123IBAN", Account.TYPE_SAVINGS, "EUR", BigDecimal(9_090))
     )

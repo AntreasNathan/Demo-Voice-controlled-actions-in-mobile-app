@@ -82,19 +82,19 @@
 
     <!-- Add Open App Feature BII capability   -->
     <!-- This is a sample shortcuts.xml -->
-<!--    <capability android:name="actions.intent.OPEN_APP_FEATURE">-->
-<!--        <intent-->
-<!--            android:targetPackage="com.github.mrmitew.bankapp"-->
-<!--            android:targetClass="com.github.mrmitew.bankapp.features.main.ui.MainActivity">-->
-<!--            <parameter-->
-<!--                android:name="feature"-->
-<!--                android:key="featureParam"/>-->
-<!--        </intent>-->
-<!--    </capability>-->
+    <!--    <capability android:name="actions.intent.OPEN_APP_FEATURE">-->
+    <!--        <intent-->
+    <!--            android:targetPackage="com.github.mrmitew.bankapp"-->
+    <!--            android:targetClass="com.github.mrmitew.bankapp.features.main.ui.MainActivity">-->
+    <!--            <parameter-->
+    <!--                android:name="feature"-->
+    <!--                android:key="featureParam"/>-->
+    <!--        </intent>-->
+    <!--    </capability>-->
 
 
 
-<!--    &lt;!&ndash; Short and long labels must be @string resource. &ndash;&gt;&ndash;&gt;-->
+    <!--    &lt;!&ndash; Short and long labels must be @string resource. &ndash;&gt;&ndash;&gt;-->
     <!--    <shortcut-->
     <!--        android:shortcutId="ID_ONE"-->
     <!--        android:shortcutShortLabel="@string/shortcut_short_label"-->

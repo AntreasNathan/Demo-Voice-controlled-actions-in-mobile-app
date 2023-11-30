@@ -15,7 +15,6 @@ This file contains the words to be recognized by google assistant through voice
         <item>Account balance check</item>
         <item>Balance status</item>
         <item>Account overview</item>
-        <item>"Hey Google, inquire balance."</item>
     </array>
 
     <array name="make_transfer_synonyms">

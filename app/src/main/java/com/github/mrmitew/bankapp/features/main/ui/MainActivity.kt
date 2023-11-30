@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
             //val thingName: String? = intent.getStringExtra("moneyTransferOrigin.provider")
             val transferMode: String? = intent.getStringExtra("transferMode")
             if (transferMode == "http://schema.googleapis.com/ReceiveMoney") {
-                 handleCreateMoneyTransferIntent(intent)
+                handleCreateMoneyTransferIntent(intent)
             } else {
                 handleGetThingIntent(intent)
             }

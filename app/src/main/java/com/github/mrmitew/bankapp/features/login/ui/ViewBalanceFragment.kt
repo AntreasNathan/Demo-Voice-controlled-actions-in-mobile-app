@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.mrmitew.bankapp.R
 //
 class ViewBalanceFragment : Fragment() {
-
+/*
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,4 +26,6 @@ class ViewBalanceFragment : Fragment() {
 
         return view
     }
+     */
 }
+

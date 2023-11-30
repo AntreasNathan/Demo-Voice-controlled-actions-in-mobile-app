@@ -7,14 +7,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <Button
-        android:textAllCaps="false"
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="90dp"
-        android:backgroundTint="@color/pine_green"
-        android:text="Back" />
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -67,7 +59,7 @@
         <TextView
             android:id="@+id/smallText"
             android:layout_width="match_parent"
-            android:layout_height="200px"
+            android:layout_height="280px"
             android:height="180dp"
             android:gravity="center"
             android:text="Available"
@@ -79,8 +71,9 @@
 
         <TextView
             android:id="@+id/textViewTitle"
-            android:layout_width="870px"
+            android:layout_width="1180px"
             android:layout_height="200px"
+            android:layout_marginRight="280dp"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
             android:textColor="@color/pine_green"

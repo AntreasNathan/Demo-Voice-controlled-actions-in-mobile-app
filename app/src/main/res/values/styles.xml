@@ -41,7 +41,7 @@
 <!--        <item name="android:textSize">500sp</item>-->
     </style>
 
-    <style name="MyToolbarTitleTextAppearance" parent="@style/boxOutline">
+    <style name="MyToolbarTitleTextAppearance">
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <!-- Adjust the text size as needed -->
